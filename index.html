@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Simple to be</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <!-- Header Section -->
+    <header class="text-center mb-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-orange-500">English with Mixlass</h1>
+        <p class="text-xl md:text-2xl text-gray-700 mt-2">LEARN. SHARE. CONNECT</p>
+    </header>
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-xl shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center">Грамматика: Present Simple (to be)</h2>
+        <p class="text-lg text-gray-600 mb-8 text-center">Проверьте свои знания и узнайте, как правильно использовать глагол 'to be' с местоимениями 'I' и 'you'!</p>
+
+        <!-- Task 1: Fill in the gaps -->
+        <div id="task1" class="mb-8">
+            <h3 class="text-xl font-semibold mb-4 text-orange-500">Задание 1: Вставьте правильный вариант (am/are)</h3>
+            <form id="quizForm1" class="space-y-4">
+                <div class="flex items-center space-x-2 flex-wrap">
+                    <span class="text-gray-700">1. I ____ a teacher.</span>
+                    <select id="q1" class="border rounded-md p-2 w-24">
+                        <option value="">...</option>
+                        <option value="am">am</option>
+                        <option value="are">are</option>
+                    </select>
+                    <span id="result1" class="ml-2"></span>
+                </div>
+                <div class="flex items-center space-x-2 flex-wrap">
+                    <span class="text-gray-700">2. You ____ from Canada.</span>
+                    <select id="q2" class="border rounded-md p-2 w-24">
+                        <option value="">...</option>
+                        <option value="am">am</option>
+                        <option value="are">are</option>
+                    </select>
+                    <span id="result2" class="ml-2"></span>
+                </div>
+            </form>
+        </div>
+
+        <!-- Task 2: Negative sentences -->
+        <div id="task2" class="mb-8">
+            <h3 class="text-xl font-semibold mb-4 text-orange-500">Задание 2: Сделайте предложения отрицательными</h3>
+            <p class="text-sm text-gray-500 mb-2">Например: I am happy. -> I am not happy.</p>
+            <form id="quizForm2" class="space-y-4">
+                <div>
+                    <span class="text-gray-700">1. I am a student.</span>
+                    <input type="text" id="neg1" class="border rounded-md p-2 w-full mt-1" placeholder="Ваш ответ">
+                    <span id="resultNeg1" class="ml-2"></span>
+                </div>
+                <div>
+                    <span class="text-gray-700">2. You are in Paris.</span>
+                    <input type="text" id="neg2" class="border rounded-md p-2 w-full mt-1" placeholder="Ваш ответ">
+                    <span id="resultNeg2" class="ml-2"></span>
+                </div>
+            </form>
+        </div>
+
+        <!-- Task 3: Questions -->
+        <div id="task3" class="mb-8">
+            <h3 class="text-xl font-semibold mb-4 text-orange-500">Задание 3: Задайте вопрос</h3>
+            <p class="text-sm text-gray-500 mb-2">Например: I am from Argentina. -> Am I from Argentina?</p>
+            <form id="quizForm3" class="space-y-4">
+                <div>
+                    <span class="text-gray-700">1. I am from Spain.</span>
+                    <input type="text" id="ques1" class="border rounded-md p-2 w-full mt-1" placeholder="Ваш ответ">
+                    <span id="resultQues1" class="ml-2"></span>
+                </div>
+                <div>
+                    <span class="text-gray-700">2. You are a student.</span>
+                    <input type="text" id="ques2" class="border rounded-md p-2 w-full mt-1" placeholder="Ваш ответ">
+                    <span id="resultQues2" class="ml-2"></span>
+                </div>
+            </form>
+        </div>
+
+        <!-- Task 4: Complete the conversation -->
+        <div id="task4" class="mb-8">
+            <h3 class="text-xl font-semibold mb-4 text-orange-500">Задание 4: Дополните диалог</h3>
+            <p class="text-sm text-gray-500 mb-2">Используйте слова из рамки: am, are (x2), I (x2), 'm, not, you</p>
+            <div class="space-y-2">
+                <div>
+                    <span class="text-gray-700">A: Hello, I <input type="text" id="conv1" class="border-b border-gray-400 w-12 text-center" placeholder="..."> Sue.</span>
+                    <span id="resultConv1" class="ml-2"></span>
+                </div>
+                <div>
+                    <span class="text-gray-700">B: Hi, <input type="text" id="conv2" class="border-b border-gray-400 w-12 text-center" placeholder="..."> 'm Tony.</span>
+                    <span id="resultConv2" class="ml-2"></span>
+                </div>
+                <div>
+                    <span class="text-gray-700">A: <input type="text" id="conv3" class="border-b border-gray-400 w-12 text-center" placeholder="..."> you from the USA?</span>
+                    <span id="resultConv3" class="ml-2"></span>
+                </div>
+                <div>
+                    <span class="text-gray-700">B: No, I'm <input type="text" id="conv4" class="border-b border-gray-400 w-12 text-center" placeholder="...">.</span>
+                    <span id="resultConv4" class="ml-2"></span>
+                </div>
+                <div>
+                    <span class="text-gray-700">A: Where <input type="text" id="conv5" class="border-b border-gray-400 w-12 text-center" placeholder="..."> you from?</span>
+                    <span id="resultConv5" class="ml-2"></span>
+                </div>
+                <div>
+                    <span class="text-gray-700">B: I'm from Canada. And you? Are <input type="text" id="conv6" class="border-b border-gray-400 w-12 text-center" placeholder="..."> from Australia?</span>
+                    <span id="resultConv6" class="ml-2"></span>
+                </div>
+                <div>
+                    <span class="text-gray-700">A: Yes, I <input type="text" id="conv7" class="border-b border-gray-400 w-12 text-center" placeholder="...">.</span>
+                    <span id="resultConv7" class="ml-2"></span>
+                </div>
+                <div>
+                    <span class="text-gray-700">B: Where in Australia? A: <input type="text" id="conv8" class="border-b border-gray-400 w-12 text-center" placeholder="..."> 'm from Brisbane.</span>
+                    <span id="resultConv8" class="ml-2"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex justify-center space-x-4">
+            <button onclick="checkAnswers()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-md shadow-md transition duration-300">Проверить</button>
+            <button onclick="resetAnswers()" class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-6 rounded-md shadow-md transition duration-300">Сбросить</button>
+        </div>
+    </div>
+
+    <!-- Explanation Section -->
+    <div id="explanations" class="max-w-4xl mx-auto mt-8 p-6 md:p-10 bg-white rounded-xl shadow-lg hidden">
+        <h3 class="text-2xl font-bold mb-4 text-orange-500">Объяснения</h3>
+        <p class="mb-4">
+            <strong>Глагол 'to be'</strong> в настоящем времени для местоимений 'I' и 'you' имеет две формы: <strong>am, are</strong>.
+        </p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+            <li><strong>I</strong> всегда используется с <strong>am</strong>. Например: I am Nadia. I'm seven.</li>
+            <li><strong>You</strong> всегда используется с <strong>are</strong>. Например: You are a student. You're a teacher.</li>
+        </ul>
+        <p class="mb-4">
+            Чтобы сделать предложение отрицательным, нужно добавить <strong>not</strong> после глагола 'to be'.
+        </p>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+            <li>I am not... (I'm not)</li>
+            <li>You are not... (You're not / You aren't)</li>
+        </ul>
+        <p class="mb-4">
+            Для того чтобы задать вопрос, нужно поставить глагол 'to be' в начало предложения.
+        </p>
+        <ul class="list-disc list-inside space-y-2">
+            <li>Am I...?</li>
+            <li>Are you...?</li>
+        </ul>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center mt-10">
+        <p class="text-lg md:text-xl text-gray-700">LEARN. SHARE. CONNECT</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: ['am'],
+                q2: ['are'],
+                // Добавлены варианты без апострофа, а также вариант 'aren't'
+                neg1: ['i am not a student', 'i\'m not a student', 'im not a student'],
+                // Добавлен вариант с 'aren't', а также варианты без апострофа
+                neg2: ['you are not in paris', 'you\'re not in paris', 'you aren\'t in paris', 'you are not in paris', 'youre not in paris', 'you arent in paris'],
+                // Добавлены варианты без вопросительного знака
+                ques1: ['am i from spain?', 'am i from spain'],
+                ques2: ['are you a student?', 'are you a student'],
+                // Добавлены варианты без апострофа
+                conv1: ['am', '\'m', 'am'],
+                conv2: ['i'],
+                conv3: ['are'],
+                conv4: ['not'],
+                conv5: ['are'],
+                conv6: ['you'],
+                conv7: ['am', '\'m'],
+                conv8: ['i']
+            };
+
+            let allCorrect = true;
+
+            // Task 1
+            const q1 = document.getElementById('q1').value.toLowerCase().trim();
+            const q2 = document.getElementById('q2').value.toLowerCase().trim();
+
+            document.getElementById('result1').textContent = answers.q1.includes(q1) ? '✅' : '❌';
+            document.getElementById('result2').textContent = answers.q2.includes(q2) ? '✅' : '❌';
+
+            if (!answers.q1.includes(q1) || !answers.q2.includes(q2)) {
+                allCorrect = false;
+            }
+
+            // Task 2
+            const neg1 = document.getElementById('neg1').value.toLowerCase().trim().replace(/['`’‘]/g, '');
+            const neg2 = document.getElementById('neg2').value.toLowerCase().trim().replace(/['`’‘]/g, '');
+
+            const neg1_answers = answers.neg1.map(ans => ans.replace(/['`’‘]/g, ''));
+            const neg2_answers = answers.neg2.map(ans => ans.replace(/['`’‘]/g, ''));
+
+            document.getElementById('resultNeg1').textContent = neg1_answers.includes(neg1) ? '✅' : '❌';
+            document.getElementById('resultNeg2').textContent = neg2_answers.includes(neg2) ? '✅' : '❌';
+
+            if (!neg1_answers.includes(neg1) || !neg2_answers.includes(neg2)) {
+                allCorrect = false;
+            }
+            
+            // Task 3
+            const ques1 = document.getElementById('ques1').value.toLowerCase().trim().replace(/[?]/g, '');
+            const ques2 = document.getElementById('ques2').value.toLowerCase().trim().replace(/[?]/g, '');
+
+            const ques1_answers = answers.ques1.map(ans => ans.replace(/[?]/g, ''));
+            const ques2_answers = answers.ques2.map(ans => ans.replace(/[?]/g, ''));
+
+            document.getElementById('resultQues1').textContent = ques1_answers.includes(ques1) ? '✅' : '❌';
+            document.getElementById('resultQues2').textContent = ques2_answers.includes(ques2) ? '✅' : '❌';
+
+            if (!ques1_answers.includes(ques1) || !ques2_answers.includes(ques2)) {
+                allCorrect = false;
+            }
+
+            // Task 4
+            const conv1 = document.getElementById('conv1').value.toLowerCase().trim().replace(/['`’‘]/g, '');
+            const conv2 = document.getElementById('conv2').value.toLowerCase().trim().replace(/['`’‘]/g, '');
+            const conv3 = document.getElementById('conv3').value.toLowerCase().trim().replace(/['`’‘]/g, '');
+            const conv4 = document.getElementById('conv4').value.toLowerCase().trim().replace(/['`’‘]/g, '');
+            const conv5 = document.getElementById('conv5').value.toLowerCase().trim().replace(/['`’‘]/g, '');
+            const conv6 = document.getElementById('conv6').value.toLowerCase().trim().replace(/['`’‘]/g, '');
+            const conv7 = document.getElementById('conv7').value.toLowerCase().trim().replace(/['`’‘]/g, '');
+            const conv8 = document.getElementById('conv8').value.toLowerCase().trim().replace(/['`’‘]/g, '');
+
+            const conv1_answers = answers.conv1.map(ans => ans.replace(/['`’‘]/g, ''));
+            const conv7_answers = answers.conv7.map(ans => ans.replace(/['`’‘]/g, ''));
+
+            document.getElementById('resultConv1').textContent = conv1_answers.includes(conv1) ? '✅' : '❌';
+            document.getElementById('resultConv2').textContent = answers.conv2.includes(conv2) ? '✅' : '❌';
+            document.getElementById('resultConv3').textContent = answers.conv3.includes(conv3) ? '✅' : '❌';
+            document.getElementById('resultConv4').textContent = answers.conv4.includes(conv4) ? '✅' : '❌';
+            document.getElementById('resultConv5').textContent = answers.conv5.includes(conv5) ? '✅' : '❌';
+            document.getElementById('resultConv6').textContent = answers.conv6.includes(conv6) ? '✅' : '❌';
+            document.getElementById('resultConv7').textContent = conv7_answers.includes(conv7) ? '✅' : '❌';
+            document.getElementById('resultConv8').textContent = answers.conv8.includes(conv8) ? '✅' : '❌';
+
+            if (!conv1_answers.includes(conv1) || !answers.conv2.includes(conv2) || !answers.conv3.includes(conv3) || !answers.conv4.includes(conv4) || !answers.conv5.includes(conv5) || !answers.conv6.includes(conv6) || !conv7_answers.includes(conv7) || !answers.conv8.includes(conv8)) {
+                allCorrect = false;
+            }
+
+            // Show explanation section if there are mistakes
+            if (!allCorrect) {
+                document.getElementById('explanations').classList.remove('hidden');
+            } else {
+                document.getElementById('explanations').classList.add('hidden');
+            }
+        }
+
+        function resetAnswers() {
+            document.getElementById('quizForm1').reset();
+            document.getElementById('quizForm2').reset();
+            document.getElementById('quizForm3').reset();
+            document.getElementById('task4').querySelectorAll('input').forEach(input => input.value = '');
+
+            document.getElementById('result1').textContent = '';
+            document.getElementById('result2').textContent = '';
+            document.getElementById('resultNeg1').textContent = '';
+            document.getElementById('resultNeg2').textContent = '';
+            document.getElementById('resultQues1').textContent = '';
+            document.getElementById('resultQues2').textContent = '';
+            
+            document.getElementById('resultConv1').textContent = '';
+            document.getElementById('resultConv2').textContent = '';
+            document.getElementById('resultConv3').textContent = '';
+            document.getElementById('resultConv4').textContent = '';
+            document.getElementById('resultConv5').textContent = '';
+            document.getElementById('resultConv6').textContent = '';
+            document.getElementById('resultConv7').textContent = '';
+            document.getElementById('resultConv8').textContent = '';
+
+            document.getElementById('explanations').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
